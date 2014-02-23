@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 0c3b1d634f888444a8205aa4c46134ad
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: mario_misc2_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 909
+        width: 80
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 909
+        width: 48
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 909
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 909
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 856
+        width: 16
+        height: 46
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 856
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 856
+        width: 16
+        height: 46
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 856
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 856
+        width: 64
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 856
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_10
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 856
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 856
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 723
+        width: 128
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 723
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_14
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 723
+        width: 64
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_15
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 723
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_16
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 632
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_17
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 632
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_18
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 632
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_19
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 500
+        width: 62
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_20
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 500
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_21
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 500
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_22
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 500
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_23
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 500
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_24
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 364
+        width: 62
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_25
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 364
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_26
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 364
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_27
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 364
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_28
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 364
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_29
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 187
+        width: 23
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_30
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 187
+        width: 24
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_31
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 187
+        width: 24
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_32
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 187
+        width: 24
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_33
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 187
+        width: 24
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_34
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 6
+        width: 148
+        height: 176
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_35
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 6
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_36
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 507
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: mario_misc2_sprite_37
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 480
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
