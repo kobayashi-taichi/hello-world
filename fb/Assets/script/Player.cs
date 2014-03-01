@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
 	public float VX = 1;
 	public float VY = 3;
 	private bool isGrounded = false;
+	private bool isLosingControl = false;
 	public float flappedY = 0f;
 	public float maxAngle = 30f;
 	public float minAngle = -90f;
@@ -44,9 +45,11 @@ public class Player : MonoBehaviour {
 			foreach(BoxCollider2D bc2 in bc2s) {
 				bc2.enabled = false;
 			}
-
+			isLosingControl = true;
 		}
-		isGrounded = true;
+		if (go.CompareTag("Ground")) {
+			isGrounded = true;
+		}
 	}
 	public void ChangePlayerState(PlayerState state) {
 //		Debug.Log (state);
@@ -62,6 +65,7 @@ public class Player : MonoBehaviour {
 			playerSprite.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
 			rigidbody2D.isKinematic = true;	
 			isGrounded = false;
+			isLosingControl = false;
 			Animator animator = GetComponentInChildren<Animator>();
 			if (!animator.GetCurrentAnimatorStateInfo(0).IsName("ready")) {
 				animator.SetTrigger("ready");
@@ -121,12 +125,14 @@ public class Player : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0)) {
 			isClicked = true;
 		}
+		UpdateRotate();
+		if (isLosingControl) {
+			return;
+		}
 		transform.Translate(Vector3.right * Time.deltaTime * VX);
 		if (isClicked) {
 			Flap ();
 		}
-		UpdateRotate();
-
 	}
 	private void UpdateDead() {
 	}
@@ -135,14 +141,15 @@ public class Player : MonoBehaviour {
 		flappedY = transform.position.y;
 		target_angle = 30;
 			iTween.RotateTo(playerSprite, iTween.Hash(
-				"z", 30, "easeType", iTween.EaseType.linear, "speed", 500f));
+				"z", 30, "easeType", iTween.EaseType.linear, "speed", 300f));
 		isFalling = false;
 	}
+	float borderVy = -0.0f;
 	void UpdateRotate () {
 		float dy = transform.position.y - flappedY;
 		if (rigidbody2D.velocity.y < 0 && dy <= 0.2 && !isFalling) {
 			iTween.RotateTo(playerSprite, iTween.Hash(
-				"z", -100, "easeType", iTween.EaseType.linear, "speed", 500f));
+				"z", -100, "easeType", iTween.EaseType.easeOutSine, "speed", 300f));
 			isFalling = true;
 		}
 	}

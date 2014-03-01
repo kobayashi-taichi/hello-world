@@ -8,14 +8,7 @@ public class Blocker : MonoBehaviour {
 			Destroy (go);
 		}
 	}
-
-	// Use this for initialization
-	void Start () {
-	}
-	// Update is called once per frame
-	void Update () {
-	}
 	void OnBecameInvisible () {
-		Destroy(this.gameObject);
+		Destroy(this.gameObject, 1f);
 	}
 }

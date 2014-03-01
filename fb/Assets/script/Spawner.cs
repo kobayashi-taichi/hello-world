@@ -8,19 +8,17 @@ public class Spawner : MonoBehaviour {
 	public float MIN_Y;
 	public float INTERVAL;
 	float lastX = 0;
+	float offsetX = -0.8f;
 
-	GameObject player;
-	Scene scene;
-	void Awake () {
-		player = GameObject.Find("Player");
-		scene = GameObject.Find ("Scene").GetComponent<Scene>();
-	}
+	public GameObject player;
+	public Scene scene;
+
 	// Use this for initialization
 	void Start () {
 		Reset ();
 	}
 	public void Reset () {
-		lastX = player.transform.position.x;
+		lastX = player.transform.position.x + offsetX;
 	}
 	
 	// Update is called once per frame
@@ -33,7 +31,7 @@ public class Spawner : MonoBehaviour {
 			return;
 		}
 		Spawn ();
-		Reset ();
+		lastX = player.transform.position.x;
 	}
 	void Spawn () {
 		Vector3 newPosition = new Vector3(player.transform.position.x, 0, 0);

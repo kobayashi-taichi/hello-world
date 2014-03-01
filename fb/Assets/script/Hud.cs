@@ -4,12 +4,41 @@ using System.Collections;
 public class Hud : MonoBehaviour {
 
 	private Scene scene;
+	private GameObject startButton;
+	private GameObject gameoverButton;
+	void Awake () {
+		scene = GameObject.Find("Scene").GetComponent<Scene>();
+		startButton = transform.FindChild("StartButton").gameObject;
+		startButton.renderer.enabled = false;
+		gameoverButton = transform.FindChild("GameoverButton").gameObject;
+		gameoverButton.renderer.enabled = false;
+	}
+	void Update() {
+		Scene.State state = scene.GetState();
+		switch(state) {
+		case Scene.State.TITLE:
+			startButton.renderer.enabled = true;
+			gameoverButton.renderer.enabled = false;
+			if (Input.GetMouseButtonDown(0)) {
+				scene.EnterPlaying();
+			}
+			break;
+		case Scene.State.GAMEOVER:
+			gameoverButton.renderer.enabled = true;
+			if (Input.GetMouseButtonDown(0)) {
+				scene.EnterTitle();
+			}
+			break;
+		default:
+			startButton.renderer.enabled = false;
+			gameoverButton.renderer.enabled = false;
+			break;
+		}
+	}
 
 	void OnGUI(){
-		if (!scene) {
-			scene = GameObject.Find("Scene").GetComponent<Scene>();
-		}
 		Scene.State state = scene.GetState();
+/*
 		switch(state) {
 		case Scene.State.TITLE:
 			GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
@@ -17,6 +46,7 @@ public class Hud : MonoBehaviour {
 			GUILayout.BeginHorizontal();
 			GUILayout.FlexibleSpace();
 
+			GUILayout.Button("hoge", 
 			if (GUILayout.Button("START")) {
 				scene.EnterPlaying();
 			}
@@ -43,5 +73,7 @@ public class Hud : MonoBehaviour {
 			break;
 
 		}
+*/
+
 	}
 }

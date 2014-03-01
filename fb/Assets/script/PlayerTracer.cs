@@ -3,11 +3,10 @@ using System.Collections;
 
 public class PlayerTracer : MonoBehaviour {
 
-	GameObject player;
+	public GameObject player;
 	Vector3 offset;
 	// Use this for initialization
 	void Start () {
-		player = GameObject.Find("Player");
 		offset = transform.position - player.transform.position;
 	}
 	
