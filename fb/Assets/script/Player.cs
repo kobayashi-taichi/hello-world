@@ -4,6 +4,7 @@ using System.Collections;
 [System.Serializable]
 public class Player : MonoBehaviour {
 	// set by inspector
+	public GameObject Hud;
 	public float VX = 1;
 	public float VY = 3;
 	private bool isGrounded = false;
@@ -26,14 +27,14 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		initial_position = transform.position;
+		scene = GameObject.Find("Scene").GetComponent<Scene>();
 	}
 	void Start () {
-		score = GameObject.Find("Score").GetComponent<Score>();
 		playerSprite = transform.FindChild("PlayerSprite").gameObject;
 		ChangePlayerState(PlayerState.IDLE);
 	}
 	void OnTriggerExit2D(Collider2D other) {
-		score.AddScore();
+		scene.Score.AddScore();
 	}
 	void OnCollisionEnter2D(Collision2D collision) {
 		GameObject go = collision.gameObject;
@@ -54,7 +55,6 @@ public class Player : MonoBehaviour {
 	public void ChangePlayerState(PlayerState state) {
 //		Debug.Log (state);
 		// rotation speed : time = distance / speed
-		Debug.Log (state);
 		switch(state) {
 		case PlayerState.PLAYING:
 			rigidbody2D.isKinematic = false;
@@ -86,9 +86,6 @@ public class Player : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (!scene) {
-			scene = GameObject.Find("Scene").GetComponent<Scene>();
-		}
 		switch (playerState) {
 		case PlayerState.DEAD:
 			UpdateDead();

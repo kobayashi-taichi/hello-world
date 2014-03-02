@@ -7,11 +7,13 @@ public class Scene : MonoBehaviour {
 	public enum State {
 		TITLE, READY, PLAYING, GAMEOVER
 	}
+	public GameObject Hud;
+	public Score Score;
 	private State state;
-	private Score score;
 
 	// Use this for initialization
 	void Start () {
+		Score = Hud.GetComponent<Score>();
 		EnterTitle();
 	}
 	public void EnterTitle() {
@@ -21,8 +23,7 @@ public class Scene : MonoBehaviour {
 		Blocker.RemoveAll();
 		Spawner spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
 		spawner.Reset();
-		Score score = GameObject.Find("Score").GetComponent<Score>();
-		score.SetScore(0);
+		Score.SetScore(0);
 	}
 	public void EnterPlaying() {
 		state = State.PLAYING;

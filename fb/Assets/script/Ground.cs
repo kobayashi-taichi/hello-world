@@ -4,7 +4,7 @@ using System.Collections;
 public class Ground : MonoBehaviour {
 	public GameObject camera;
 	private Vector3 initial_position;
-	private float width = 0.67f;
+	private float width = 1.27f;
 	private static int NUM = 4;
 
 	// Use this for initialization
@@ -14,7 +14,7 @@ public class Ground : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float  total_width = width * Ground.NUM;
+		float  total_width = width * NUM;
 		float dist = camera.transform.position.x - initial_position.x;
 		int n = Mathf.RoundToInt(dist / total_width);
 		Vector3 position = initial_position;
