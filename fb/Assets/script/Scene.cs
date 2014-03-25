@@ -10,22 +10,26 @@ public class Scene : MonoBehaviour {
 	public GameObject Hud;
 	public Score Score;
 	private State state;
+	private Player player;
+	private Spawner spawner;
 
-	// Use this for initialization
-	void Start () {
+	void Awake () {
+		player = GameObject.Find("Player").GetComponent<Player>();
+		spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
 		Score = Hud.GetComponent<Score>();
+	}
+	void Start () {
 		EnterTitle();
 	}
 	public void EnterTitle() {
 		state = State.TITLE;
-		Player player = GameObject.Find("Player").GetComponent<Player>();
-		player.ChangePlayerState(Player.PlayerState.IDLE);
+		player.Init ();
 		Blocker.RemoveAll();
-		Spawner spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
 		spawner.Reset();
 		Score.SetScore(0);
 	}
 	public void EnterPlaying() {
+		player.Play();
 		state = State.PLAYING;
 	}
 	public void EnterGameover() {
@@ -36,9 +40,5 @@ public class Scene : MonoBehaviour {
 	}
 	public bool isState(State state){
 		return this.state == state;
-	}
-
-	// Update is called once per frame
-	void Update () {
 	}
 }
