@@ -11,8 +11,7 @@ public class PlayerTracer : MonoBehaviour {
 		offset = transform.position - player.transform.position;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 //		transform.position = new Vector3(
 //			Mathf.Lerp (transform.position.x, player.transform.position.x + offset.x, Time.deltaTime * smoothX),
 //			transform.position.y,
