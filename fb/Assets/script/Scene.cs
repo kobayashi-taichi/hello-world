@@ -14,6 +14,7 @@ public class Scene : MonoBehaviour {
 	private Spawner spawner;
 
 	void Awake () {
+		Application.targetFrameRate = 60;
 		player = GameObject.Find("Player").GetComponent<Player>();
 		spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
 		Score = Hud.GetComponent<Score>();

@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
 	public Vector3 velocityForward;
 	private Scene scene;
 	private GameObject playerSprite;
-	private GameObject camera;
+	private GameObject mainCamera;
 
 	private Vector3 initial_position;
 	private bool isClicked = false;
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour {
 		initial_position = transform.position;
 		scene = GameObject.Find("Scene").GetComponent<Scene>();
 		playerSprite = transform.FindChild("PlayerSprite").gameObject;
-		camera = GameObject.Find("Camera");
+		mainCamera = GameObject.Find("Camera");
 
 	}
 	void OnTriggerExit2D(Collider2D other) {
@@ -69,7 +69,7 @@ public class Player : MonoBehaviour {
 		rigidbody2D.velocity = velocity;
 		iTween.RotateTo(playerSprite, iTween.Hash(
 			"z", -90, "easeType", iTween.EaseType.linear, "speed", 500f));
-		iTween.ShakePosition(camera, iTween.Hash(
+		iTween.ShakePosition(mainCamera, iTween.Hash(
 			"time", 0.5f, "x", 0.05f, "y", 0.05f));
 
 		GetComponentInChildren<Animator> ().SetBool ("playing", false);
@@ -96,6 +96,7 @@ public class Player : MonoBehaviour {
 				"z", -90, "easeType", iTween.EaseType.linear, "speed", 500f));
 			jumpedY = -999f;
 		}
-		rigidbody2D.velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+//		rigidbody2D.velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+		rigidbody2D.velocity = velocity;
 	}
 }
